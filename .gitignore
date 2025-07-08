@@ -1,0 +1,21 @@
+# API keys and sensitive data
+config.js
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules (if you add any later)
+node_modules/
+
+# Personal notes
+notes.txt

@@ -1,0 +1,320 @@
+/* styles.css - Content script styles */
+#saasquatch-widget {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.sq-widget {
+  padding: 20px;
+}
+
+.sq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.sq-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.sq-score {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.sq-score-high {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.sq-score-medium {
+  background: #fed7aa;
+  color: #92400e;
+}
+
+.sq-score-low {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.sq-section {
+  margin-bottom: 20px;
+}
+
+.sq-section h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sq-info {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.sq-label {
+  font-weight: 500;
+  color: #6b7280;
+  margin-right: 5px;
+}
+
+.sq-email {
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sq-email:hover {
+  color: #1d4ed8;
+}
+
+.sq-confidence {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-left: 5px;
+}
+
+.sq-signals {
+  margin: 0;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.sq-signals li {
+  position: relative;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #059669;
+  margin-bottom: 5px;
+}
+
+.sq-signals li:before {
+  content: '✓';
+  position: absolute;
+  left: -18px;
+  font-weight: bold;
+}
+
+.sq-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.sq-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+  color: #374151;
+}
+
+.sq-btn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.sq-btn-primary {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.sq-btn-primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+/* Mini score badges on search results */
+.sq-mini-score {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  vertical-align: middle;
+}
+
+/* Add to existing styles.css */
+.sq-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sq-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #f3f4f6;
+  border-top: 3px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.sq-loading-text {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* Notification styles */
+.sq-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #10b981;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s ease-out;
+  z-index: 10000;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Powered by footer */
+.sq-powered {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #f3f4f6;
+  text-align: center;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* Enhanced email styles */
+.sq-email {
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.sq-email:hover {
+  color: #1d4ed8;
+  background: #eff6ff;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Email metadata */
+.sq-email-meta {
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+.sq-confidence {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.sq-confidence-high {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.sq-confidence-medium {
+  background: #fed7aa;
+  color: #92400e;
+}
+
+.sq-confidence-low {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.sq-source {
+  margin-left: 8px;
+  color: #6b7280;
+}
+
+/* Not found state */
+.sq-not-found {
+  color: #9ca3af;
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* Tech stack display */
+.sq-tech-list {
+  margin-top: 4px;
+}
+
+.sq-tech {
+  display: inline-block;
+  background: #f3f4f6;
+  color: #374151;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  margin: 2px 4px 2px 0;
+  border: 1px solid #e5e7eb;
+}
+
+/* Emoji in signals */
+.sq-signals li {
+  font-size: 13px;
+  line-height: 1.8;
+}

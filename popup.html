@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+  <title>SaaSquatch Intelligence</title>
+</head>
+<body>
+  <div class="popup-container">
+    <h2>SaaSquatch Intelligence</h2>
+    
+    <div class="stats-container">
+      <div class="stat">
+        <span class="stat-value" id="profilesScanned">0</span>
+        <span class="stat-label">Profiles Scanned</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="leadsFound">0</span>
+        <span class="stat-label">Quality Leads</span>
+      </div>
+    </div>
+
+    <div class="api-usage" id="apiUsage">
+        <h3>API Usage This Month</h3>
+        <div class="usage-item">
+            <span class="usage-label">Hunter.io:</span>
+            <span class="usage-value"><span id="hunterUsage">0</span> / 25</span>
+        </div>
+        <div class="usage-item">
+            <span class="usage-label">Apollo.io:</span>
+            <span class="usage-value"><span id="apolloUsage">0</span> / 50</span>
+        </div>
+    </div>
+    
+    <div class="section-title">Recent High-Score Leads</div>
+    <div class="saved-leads" id="savedLeads">
+      <div class="empty-state">No leads saved yet</div>
+    </div>
+    
+    <div class="footer">
+      <a href="https://www.linkedin.com" target="_blank" class="action-link">
+        Open LinkedIn →
+      </a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
