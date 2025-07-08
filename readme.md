@@ -141,12 +141,3 @@ npm test
 # Build for production
 npm run build
 ```
-
-- Average SDR salary: $50,000/year
-- Time spent on research: 30% (15 hours/week)
-- Time saved with extension: 95% (14.25 hours/week)
-- **Annual savings per SDR: $14,250**
-
----
-
-*Built with ❤️ for the modern sales team*
